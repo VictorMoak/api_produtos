@@ -1,8 +1,10 @@
 let db = [];
 
 class ProdutosController {
-
     index(req, res) {
+        console.log("Conectado")
+    }
+    add(req, res) {
         const body = req.body
 
         if (!body)
