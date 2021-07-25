@@ -2,7 +2,9 @@ let db = [];
 
 class ProdutosController {
     index(req, res) {
-        console.log("Conectado")
+        res.json({
+            msg: 'OK'
+        })
     }
     add(req, res) {
         const body = req.body
