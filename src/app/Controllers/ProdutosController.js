@@ -1,10 +1,25 @@
 let db = [];
 
 class ProdutosController {
-    index(req, res) {
-        res.json({
-            msg: 'OK'
-        })
+    index(req, res) {      
+        res.json([{
+            Rota: "Produtos",
+            get: "/",
+            get: "/api/produtos",
+            get: "/api/produtos-details/:desc",
+            post: "api/addProdutos",
+            delete: "/api/produtos-delete/:desc",
+            put: "/api/produtos-update/:desc"
+        },
+        {
+            Rota: "Clientes",
+            get: "/",
+            get: "/api/clientes",
+            get: "/api/clientes-details/:nm",
+            post: "api/addclientes",
+            delete: "/api/clientes-delete/:nm",
+            put: "/api/clientes-update/:nm"
+        }])
     }
     add(req, res) {
         const body = req.body
